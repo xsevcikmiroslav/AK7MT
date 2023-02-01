@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".VotesActivity">
 
+    <TextView
+        android:id="@+id/searchLabel"
+        android:layout_width="338dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Vyhledat Hlasování"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchInput"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Název Hlasování" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Vyhledat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInput" />
+
+    <ListView
+        android:id="@+id/votesList"
+        android:layout_width="409dp"
+        android:layout_height="556dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
